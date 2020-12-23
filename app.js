@@ -89,6 +89,11 @@ if (canvas) {
   canvas.addEventListener('mouseleave', stopPainting);
   canvas.addEventListener('mousedown', handleCanvasClick);
   canvas.addEventListener('contextmenu', handleCM);
+
+  canvas.addEventListener('touchmove', onMouseMove);
+  canvas.addEventListener('touchstart', startPainting);
+  canvas.addEventListener('touchstop', stopPainting);
+  canvas.addEventListener('touchcancel', stopPainting);
 }
 
 colors.forEach((color) => color.addEventListener('click', handleColorClick));
